@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+           border: 1px solid red;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //思路：外层 for 循环用来创建 tr 节点，内层 for 循环用来创建 td 节点。内层的 td 节点被
+        // 追加到了此时外层创建的 tr 节点内，形成 9 行 9 列的表格。
+        //1.创建一个表格
+        let myTable = document.createElement('table');
+        //2.使用两层 for 循环动态创建表格的 tr 和 td 节点
+        for (let i = 1; i <= 9; i++) {
+        //3.创建 tr
+        let tr = document.createElement('tr');
+        for (let j = 1; j < 9; j++) {
+        //4.创建 td
+        let td = document.createElement('td');
+        //5.设置 td 内部的文本
+        td.innerText = i + " * " + j + "=" + (i * j);
+        //6.追加 td
+        tr.appendChild(td);
+        }
+        //7.追加 tr
+        myTable.appendChild(tr);
+        }
+        //8.追加表格
+        document.body.appendChild(myTable);
+        </script>
+</body>
+</html>

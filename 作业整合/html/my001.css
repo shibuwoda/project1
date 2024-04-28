@@ -1,0 +1,15 @@
+.father {
+  width: 1.94285714 rem;
+}
+.father .son {
+  background-color: pink;
+}
+.father .son:hover {
+  background-color: pink;
+}
+.father:hover {
+  background-color: pink;
+}
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        .box{
+            width: 300px;
+            height: 50px;
+            /* background-color: pink; */
+            margin: 0 auto ;
+        }
+        .box ul li{
+            position: relative;
+             width: 100px;
+             height: 50px;
+            /* background-color: red; */
+            float: left;
+            transform-style: preserve-3d;
+            /* transform: rotateX(-20deg) rotateY(20deg); */
+            transition: all 0.5s;
+            
+            
+        }
+        .box ul li a{
+            display: block;
+            width: 100px;
+             height: 50px;
+             background-color: green;
+            text-align: center;
+            line-height: 50px;
+        }
+        .box ul li a:nth-child(1){
+            background-color: green;
+            transform: translateZ(25px);
+        }
+        .box ul li a:nth-child(2){
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: orange;
+            transform: rotateX(90deg) translateZ(25px);
+        }
+        .box ul li:hover{
+            transform: rotateX(-90deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <a href="">首页</a>
+                <a href="">index</a>
+            </li>
+            <li>
+                <a href="">登录</a>
+                <a href="">register</a>
+            </li>
+            <li>
+                <a href="">注册</a>
+                <a href="">login</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

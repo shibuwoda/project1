@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="show()">点我进行字符操作</button>
+    <script>
+        function show(){
+            let len =  +prompt('请输入字符串个数')
+            let arr = []
+            let arr2 = []
+            arr.length = len
+            arr2.length = len
+            for(let i=0;i<arr.length;i++){
+                arr[i]=prompt(`请输入第${i+1}条字符串`)
+                arr2[i]=arr[i].length
+            }
+            document.write(`
+            <p>输入字符串为:${arr.join(',')}</p>
+            <p>字符串的长度为${arr2}</p>
+            <p>字符串排序后为${arr.sort()}</p>
+            `)
+        }
+    </script>
+</body>
+</html>

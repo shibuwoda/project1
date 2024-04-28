@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .box{
+            width: 350px;
+            height: 500px;
+            background-color: greenyellow;
+            margin: 0 auto;
+        }
+        h4{
+            font-size: 30px;
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        input{
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+        }
+        span{
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+        }
+        button{
+            font-size: 30px;
+            width: 50px;
+            height: 50px;
+        }
+        .rule{
+            margin: 0 auto;
+            width: 220px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h4>欢迎您来到淘宝!</h4>
+        <h3>购物计算器</h3>
+        <span>请输入第一个数</span>
+        <input type="text" class="num1">
+        <span>请输入第二个数</span>
+        <input type="text" class="num2">
+        <span>请选择运算法则</span>
+        <div class="rule">
+            <button onclick="fn1()">+</button>
+            <button onclick="fn2()">-</button>
+            <button onclick="fn3()">*</button>
+            <button onclick="fn4()">/</button>
+        </div>
+        <span>运算结果为</span>
+        <input type="text" class="result">
+    </div>
+    <script>
+        function fn1(){
+            document.querySelector('.result').value=(+document.querySelector('.num1').value)+(+document.querySelector('.num2').value)
+        }
+        function fn2(){
+            document.querySelector('.result').value=(+document.querySelector('.num1').value)-(+document.querySelector('.num2').value)
+        }function fn3(){
+            document.querySelector('.result').value=(+document.querySelector('.num1').value)*(+document.querySelector('.num2').value)
+        }function fn4(){
+            document.querySelector('.result').value=(+document.querySelector('.num1').value)/(+document.querySelector('.num2').value)
+        }
+    </script>
+</body>
+</html>

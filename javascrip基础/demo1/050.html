@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+				width: 200px;
+				height:200px;
+				border:2px red solid;
+				background:radial-gradient(yellow 30%,red 80%);
+				border-radius: 50%;
+				transition: all 2s ease;
+			}
+    </style>
+</head>
+<body>
+    <button>圆形</button> <button>方形</button>
+<button>展示 div1 的属性信息</button><button>展示 div2 的属性信息</button>
+<div id="div1"></div> <!-- div1 这个样式是嵌入式的，样式自行定义 -->
+<div id="div2" style="width:200px;height: 200px;background-color: red;"></div>
+<p id ="p1"></p>
+<script>
+    //1.获取 div 和 button 的值
+    var div1 = document.getElementById("div1");
+    var btns = document.querySelectorAll("button");
+    //2.根据不同的按钮，实现不同的效果
+    btns[0].onclick = function(){
+    div1.style.width = "100px";
+    div1.style.height = "100px";
+    div1.style.borderRadius = "75%";
+    }
+    btns[1].onclick = function(){
+    div1.style.width = "300px";
+    div1.style.height = "300px";
+    div1.style.borderRadius = "0";
+    }
+    btns[2].onclick = function(){
+    var box = document.querySelector('#div1').style
+    document.getElementById("p1").innerHTML = "div1 的 信 息 如 下 ： "+box.width
+    +box.height+box.backgroundColor
+    }
+    btns[3].onclick = function(){
+    document.getElementById("p1").innerHTML = "div2 的信息如下："+div2.style.cssText
+    }
+</script>
+</body>
+</html>

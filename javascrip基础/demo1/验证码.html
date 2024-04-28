@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" >
+    <button onclick="fn()">生成四位数字验证码</button>
+    <button onclick="fn2()">生成四位数字字母验证码</button>
+    <button onclick="fn3()">生成四位数字字母验证码</button>
+    <script>
+        function fn(){
+            let s="";
+            for(let i = 0 ; i<4 ;i++){
+                s+=Math.floor(Math.random()*10)
+            }
+            document.querySelector('input').value=s
+        }
+        function fn2(){
+            let str = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            let ret=""
+            for(let i =0 ;i<4;i++){
+                let index =  Math.random()*62
+                ret+=str.charAt(index)
+            }
+            document.querySelector('input').value=ret
+        }
+        function fn3(){
+            let num1 = Math.floor(Math.random()*10)
+            let num2 = Math.floor(Math.random()*10)
+            let a1 = String.fromCharCode(Math.floor(Math.random()*26)+65)
+            let a2 = String.fromCharCode(Math.floor(Math.random()*26)+65)
+            document.querySelector('input').value=num1+a1+num2+a2
+
+        }   
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+.center1{
+    display: flex;
+    background-color: #f6f6f6;
+}
+.center1 .aside{
+    width: 227px;
+    min-height: 500px;
+    background-color: pink;
+    margin-right: 10px;
+}
+
+.center1 .main{
+    min-height: 500px;
+    /* background-color: skyblue; */
+    flex: 1;
+}
+.overview{
+    background-color: #fff;
+    height: 132px;
+    padding: 20px 0;
+    display: flex;
+}
+.overview div{
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.overview div:nth-child(1){
+    border-right: 1px solid #f4f4f4;
+}
+.overview div a img{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+.overview div a span{
+    color: #e05e30;
+    font-size: 25px
+}
+.overview div a:nth-child(3) img{
+    width: 18px;
+    height: 25px;
+}
+
+/* 公共 */
+.pannel{
+    padding: 28px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}  
+.ordertitle{
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    border-bottom: 1px solid #f4f4f4;
+}
+.ordertitle h4{
+    font-weight: 400;
+    font-size: 22px;
+    color: #333;
+}
+.ordertitle a{
+    font-size: 16px;
+    margin-top: 8px;
+    color: #999;
+}
+.order li{
+    height: 137px;
+    border: 1px solid #f4f4f4;
+    margin-bottom: 20px;
+    display: flex;
+}
+.order li:nth-child(2){
+    margin-bottom: 0;
+}
+.order li .good{
+    flex: 1;
+    margin-right: 120px;
+    display: flex;
+    align-items: center;
+    padding: 17px 0 14px 12px;
+}
+.order li .good .pic{
+    width: 107px;
+    height: 107px;
+}
+.order li .good .txt{
+    flex: 1;
+    width: 0;
+}
+.order li .good .txt h5{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.order li .status{
+    width: 120px;
+}
+.order li .pay{
+    width: 200px;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid  #e8e8e8;
+}
+.order li .action{
+    width: 180px;
+}
+.common{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.action a:nth-child(1){
+    width: 100px;
+    height: 30px;
+    background-color: #5eb69c;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+}

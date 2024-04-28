@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点我创建一个 p 标签</button>
+    <button>点我创建一个列表</button>
+    <button>点我创建文本框</button>
+    <button>点我创建三个</button>
+    <script>
+    var btns = document.querySelectorAll('button');
+    btns[0].onclick = function (){
+    var p = document.createElement('p');//1.创建元素
+    var text = document.createTextNode('快放五一假啦！')//2.创建文本
+    p.appendChild(text);//3.把文本插入元素
+    document.body.appendChild(p);//4.把元素添加到 body 里
+    }
+    btns[1].onclick = function(){
+    var ul = document.createElement('ul');//1.创建 ul 元素
+    var arr = ['北京','上海','广州'];
+    for(let i in arr){
+    var lis = document.createElement('li');//2.创建 li 元素
+    var text = document.createTextNode(`${i}`);//3.创建文本
+    lis.setAttribute('value',arr[i]);//添加属性 可有可无
+    lis.appendChild(text);
+    ul.appendChild(lis);//4.把 li 插入 ul
+    }
+    document.body.appendChild(ul);//5.把 ul 插入 body
+    }
+    btns[2].onclick = function(){
+    //1.创建 input 标签
+    var input = document.createElement('input');
+    //2.设置 input 的属性 text
+    input.setAttribute("type","password");
+    input.setAttribute("placeholder","请输入密码");
+    //3.input 插入到 body
+    document.body.appendChild(input);
+    }
+    btns[3].onclick = function(){
+        let ul = document.createElement('ul')
+        for(let i =0 ;i<3;i++){
+            var lis = document.createElement('li');
+            var input = document.createElement('input');
+            input.setAttribute("type","password");
+            lis.appendChild(input)
+            ul.appendChild(lis)
+        }
+        document.querySelector('body').appendChild(ul)
+    }
+    </script>
+</html>

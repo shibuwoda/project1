@@ -1,0 +1,113 @@
+*{
+    margin:0 0 ;
+    padding:0 0 ;
+}
+.header{
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+.naw{
+    width: 1000px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+}
+.naw ul li{
+    float: left;
+    margin-left: 100px;
+    list-style: none;
+    font-size: 40px;
+    font-weight: 700;
+}
+.naw ul li a{
+    text-decoration: none;
+    color: gray;
+}
+.bd{
+    margin-left: 20px;
+    height: 1870px;
+}
+.bd img{
+    width: 400px;
+    height: 565px;
+}
+.bd001,
+.bd002,
+.bd003{
+    float: left;
+}
+.box{
+    float: left;
+    width: 730px;
+    height: 565px;
+    background-image: url(../img/陈明宇底片\(1\).jpg);
+    background-size: contain;
+    overflow: hidden;
+}
+.box::before,.box::after{
+    transition: all 5s;
+    float: left;
+    content: '';
+    width: 50%;
+    height: 565px;
+    background-image: url(../img/陈明宇.jpg);
+    background-size: contain;
+}
+.box:hover::before{
+    transform: translateX(-100%);
+}
+.box:hover::after{
+    transform: translate(100%);
+}
+.cox{
+    float: left;
+    width: 730px;
+    height: 565px;
+    background-image: url(../img/曹宇航\(1\).jpg);
+    background-size: contain;
+    overflow: hidden;
+}
+.cox::before,.cox::after{
+    transition: all 5s;
+    float: left;
+    content: '';
+    width: 50%;
+    height: 565px;
+    background-image: url(../img/曹宇航.jpg);
+    background-size: contain;
+}
+.cox:hover::before{
+    transform: translateX(-100%);
+}
+.cox:hover::after{
+    transform: translate(100%);
+}
+.dox{
+    float: left;
+    width: 730px;
+    height: 565px;
+    background-image: url(../img/刘锦汉底片\(1\).jpg);
+    background-size: contain;
+    overflow: hidden;
+}
+.dox::before,.dox::after{
+    transition: all 5s;
+    float: left;
+    content: '';
+    width: 50%;
+    height: 565px;
+    background-image: url(../img/刘锦汉\(1\).jpg);
+    background-size: contain;
+}
+.dox:hover::before{
+    transform: translateX(-100%);
+}
+.dox:hover::after{
+    transform: translate(100%);
+}
+.foot001 {
+    
+    text-align: center;
+    height: 50px;
+}

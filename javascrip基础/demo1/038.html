@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    输入字符串：
+    <input type="text">
+    <button onclick="fn()">点我统计字符串中a或A的字数</button>
+    统计个数如下：<span></span>
+    <script>
+        function fn(){
+            let count=0
+           let result = document.querySelector('input').value
+           for(let i =0 ;i<result.length;i++){
+            if(result.charAt(i)==='a'||result.charAt(i)==='A'){
+                count++
+            }
+           }
+           document.querySelector('span').innerHTML=count
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let obj={
+        //     sayHello(){
+        //         console.log('hello');
+        //     }
+        // }
+        // console.log(obj);
+        // obj.name="张三"
+        // console.log(obj);
+        // obj.show=function(){
+        //     console.log(this.name);
+        // }
+        // obj.show()
+        // obj.sayHello()
+        // console.log(obj);
+        // delete obj.name
+        // console.log(obj);
+
+        // function Person(name,age){
+        // this .name = name;
+        // this.age = age;
+        // let gender ="男"
+        // this.show=function(){
+        // console.log(this.name);}
+        // }
+        // //实例化
+        // let p1 = new Person("张三",18);
+        // console.log(p1.name);
+        // console.log(p1.age);
+        // console.log(p1.gender);//?
+        // p1.show();
+
+        let obj={}
+        obj.name='南小信'
+        obj.age=71
+        obj.job='国有公办院校'
+        obj.address='文澜路99号'
+        obj.show = function(){
+            document.write(`姓名：${this.name}</br>年龄：${this.age}</br>职业：${this.job}</br>地址：${this.address}</br>`)
+        }
+        obj.show()
+
+        let obj2={
+        name:'南小信',
+        age:71,
+        job:'国有公办院校',
+        address:'文澜路99号'
+        ,show(){
+            document.write(`姓名：${this.name}</br>年龄：${this.age}</br>职业：${this.job}</br>地址：${this.address}</br>`)
+        }
+        }
+        obj2.show()
+        function Obj(name,age,job,address){
+            this.address=address
+            this.name=name
+            this.age=age
+            this.job=job
+            this.show=function(){
+            document.write(`姓名：${this.name}</br>年龄：${this.age}</br>职业：${this.job}</br>地址：${this.address}</br>`)
+        }
+        }
+        let obj3 = new  Obj("南小信","71","国有公办院校",'文澜路99号')
+        obj3.show()
+    </script>
+</body>
+</html>

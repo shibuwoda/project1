@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        table{
+            text-align: center;
+            margin: 0 auto;
+            border-collapse: collapse;
+            height: 80px;
+        }
+        td{
+            padding: 5px 20px;
+        }
+
+        table,tr,td{
+            border: 1px solid black;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h2>确认订单</h2>
+   
+    <script>
+        // let num = 20
+        // let uname = 'pink老师'
+        // console.log(num)
+        // console.log(uname)
+        // let age = 18, name = 'pink'
+        // console.log(age,name)
+        // let name = prompt('请输入姓名')
+        // document.write(name)
+        
+        // let num1 = 10 
+        // let num2 = 20
+        // let temp
+        // temp = num1
+        // num1 =num2
+        // num2 = temp
+        // console.log(num1,num2)
+
+        // let uname = prompt('请输入姓名')
+        // let age = prompt('请输入年龄')
+        // let gendar = prompt('请输入性别')
+        // document.write(uname)
+        // document.write(age)
+        // document.write(gendar)
+
+        // let arr = [1,2,3,4,5]
+        // console.log(arr[4]);
+        // console.log(arr.length)
+
+        // let r = prompt('请输入圆的半径')
+        // let s = 3.14*r*r
+        // console.log(s);
+
+        // let age = 20 
+        // console.log(`我今年${age}岁了`)
+        // document.write(`我今年${age}岁了`)
+
+        // let name = prompt('请输入您的姓名')
+        // let age = prompt('请输入您的年龄')
+        // document.write(`大家好我叫${name},今年${age}岁了`)
+
+        // console.log(3 - '2')
+
+        // let num1 = +prompt('请输入第一个数')
+        // let num2 = +prompt('请输入第二个数')
+        // let total = num1 + num2 
+        // alert(`两数之和为${total}`)
+
+        // let num1 = +prompt('请输入第一个数')
+        // let num2 = +prompt('请输入第二个数')
+        // alert(`两数之和为${num1+num2}`)
+
+        function clik(){
+
+        }
+
+        let price = +prompt('请输入商品价格')
+        let number = +prompt('请输入商品数量')
+        let adress = prompt('请输入商品收货地址')
+        document.write(`
+        <table>
+        <tr>
+            <td>商品名称</td>
+            <td>商品价格</td>
+            <td>商品数量</td>
+            <td>商品总价</td>
+            <td>收货地址</td>
+            
+        </tr>
+        <tr>
+            <td>小米青春版plus</td>
+            <td>${price}</td>
+            <td>${number}</td>
+            <td>${price*number}</td>
+            <td>${adress}</td>
+        </tr>
+    </table>
+        
+        `)
+       
+
+    </script>
+</body>
+</html>

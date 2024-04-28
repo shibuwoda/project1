@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>//1.获取节点
+        var uls = document.querySelector('ul');
+        //2.获取第一个和最后一个子节点
+        console.log(uls.firstChild);
+        console.log(uls.lastChild);
+        console.log(uls.lastChild);
+        console.log(uls.lastElementChild);
+        //3.获取兄弟节点
+        var shanghai = document.getElementsByTagName('li')[1];
+        console.log(shanghai.nextElementSibling);//广州
+        //4.获取父节点
+        console.log(shanghai.parentElement); //ul
+    </script>
+</body>
+</html>

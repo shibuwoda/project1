@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person={
+            name :'pink',
+            age : 18,
+            gendar : '女',
+            sing :function(){
+                console.log('I can sing')
+            },
+            dance :function(){
+                console.log('I can dance')
+            }
+        }
+        console.log(person);
+        console.log(typeof person)
+        person.sing()
+        person.dance()
+        for( let k in person){
+            console.log(k)
+            console.log(person[k])
+        }
+        let arr =[1,2,3,4,5,6]
+        for( let k in arr){
+            console.log(k)
+            console.log(arr[k])
+        }
+
+        let student =[
+            {name:'小红',age:18,adress:'山东省'},
+            {name:'小明',age:19,adress:'江苏省'},
+            {name:'小刚',age:17,adress:'安徽省'},
+            {name:'小李',age:20,adress:'山西省'},
+        ]
+        for(let i=0;i<student.length;i++){
+            console.log(i)
+            console.log(student[i])
+            console.log(student[i].name)
+        }
+    </script>
+</body>
+</html>

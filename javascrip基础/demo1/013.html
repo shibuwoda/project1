@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //无参函数
+        function showInfo(){
+            alert("我是移动2301！");
+            //计算1+...100=，输出sum值；              
+        }
+        function add(){
+            //计算1+...100=，输出sum值；   
+            let sum = 0;
+            for(let i=1;i<=100;i++){
+                sum += i;
+            }
+            alert(sum);
+        }
+        //有参函数
+        function add2(n,m){
+            //计算n+...+m=?
+            let sum = 0;
+            for(let i=n;i<=m;i++){
+                sum += i;
+            }
+            alert(sum);
+        }
+        //带返回值的函数
+        function sum(a,b){ //为什么button事件没有弹出
+            return a + b;
+        }
+        function add(){
+            var sum =0
+            for(let i=0;i<arguments.length;i++){
+                sum+=arguments[i]
+            }
+            return sum;
+        }
+    </script>       
+    <button  onclick="showInfo()">
+    点我点我</button>        <br />
+    <button  onclick="add2(100,1000)">
+    点我点我</button> <br />
+    <button  onclick="sum(2,3)">
+    点我点我</button>
+    <script>
+        // console.log(sum(2,3));//正常
+        // console.log(sum(2,3,4));//实参大于形参个数
+        //  console.log(sum(2));//NaN
+         console.log(add(1))
+         console.log(add(1,2))
+         console.log(add(1,2,3))
+
+    </script>
+</body>
+</html>

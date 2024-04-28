@@ -1,0 +1,23 @@
+.h1{
+    background-color: orange;
+    height: 200px;
+}
+.h2{
+    background-color: black;
+    height: 50px;
+}
+.h1 .h2 ul{
+    color: white;
+} 
+li{
+    list-style: none;
+    display: inline-block;
+}
+.h1 .h2 ul li{
+    margin-left: 50px;
+    float: right;
+    line-height: 50px;
+}
+.h1 h2 ul li a{
+    text-decoration: ;
+}

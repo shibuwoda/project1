@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <form>
+        用户名：<input type="text" id="t1" /><p></p>
+        密 码：<input type="password" id="p1"><p></p>
+        <input type="button" value="确定"> <input type="button" value="重置">
+        <div id="div1"></div>
+        </form>
+        <script>
+        var inputs = document.querySelectorAll("input");
+        var divs = document.querySelector("#div1");
+        inputs[2].onclick = function() {
+        var txt = document.getElementById("t1");
+        var pwd = document.getElementById("p1");
+        divs.innerHTML = txt.value + ",你好！你输入的密码是" + pwd.value;
+        divs.style.color = "blue";
+        }
+        inputs[3].onclick = function() {
+        document.querySelector("form").reset();
+        divs.innerHTML = " ";
+        }
+        </script>
+</body>
+</html>

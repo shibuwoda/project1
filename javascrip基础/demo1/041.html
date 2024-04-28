@@ -1,0 +1,29 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<tit1e>倒计时</tit1e>
+</head>
+	<body>
+		
+		<button onc1ick="f1()">开始倒计时</button>
+		<input type="text"name=""id="t">
+		<button onclick="f2()">停止倒计时</button>
+		<script>
+			var num=100
+			let timer;
+			function f(){
+				document.querySelector("input").value = num
+				num--;
+			}
+			function f1(){
+			timer = setInterval(function(){
+				f()
+			},1000);
+			}
+			function f2(){
+			clearInterval(timer);
+			}
+		</script>
+	</body>
+</html>

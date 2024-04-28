@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let time = parseInt(prompt('请输入当前时间'))
+        // if(time>0&&time<=12){
+        //     document.write('上午好')
+        //     for(let i=0;i<=time;i++){
+        //         document.write(`<img src="./imgs/01.gif" >`)
+        //     }
+        // }else if(time>12&&time<=16){
+        //     document.write('下午好')
+        //     for(let i=0;i<=time;i++){
+        //         document.write(`<img src="./imgs/01.gif" >`)
+        //     }
+        // }else if(time>16&&time<=24){
+        //     document.write('晚上好')
+        //     for(let i=0;i<=time;i++){
+        //         document.write(`<img src="./imgs/01.gif" >`)
+        //     }
+        // }
+
+            
+
+
+
+
+    </script>
+     <script>
+        //猜数字的小游戏
+        let num = parseInt(Math.random()*100) ;
+        while(true){
+            let a = +prompt("请输入一个数字");
+            if(a>num){
+                console.log('大了');
+            }
+            else if(a<num){
+                console.log('小了');
+            }
+            else if(a == num){
+                document.write("猜对了");
+                break;
+            }
+        }
+       </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+.zhuce{
+    width: 500px;
+    height: 420px;
+    background-color: #999;
+    margin: 0 auto;
+
+}
+.box li{
+   float: right;
+   margin-right: 100px;
+}
+.box li input{
+    height: 50px;
+    width: 240px;
+    margin-top: 10px;
+}
+.box li:nth-child(6){
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 28px;
+    text-align: center;
+    background-color: pink;
+    margin-top: 10px;
+    margin-right: 120px;
+    border-radius: 5%;
+
+}
+.box li:nth-child(6):hover{
+    
+    background-color: palegreen;
+}
+.box li:nth-child(6) div p{
+    font-size: 12px;
+}
+.box li:nth-child(6) div a{
+    font-size: 12px;
+    color: blue;
+}
+.box li:nth-child(6) div input{
+    width: 20px;
+    height: 20px;
+    vertical-align:middle;
+}
+
+/* .welcome{
+    height: 70px;
+    background-color: paleturquoise;
+}
+.welcome h1{
+    line-height: 70px;
+    text-align: center;
+} */
+.welcome{
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  h2 {
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: palegreen;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .register-link a {
+    color: blue;
+  }

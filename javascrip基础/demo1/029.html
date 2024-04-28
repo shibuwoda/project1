@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{  
+            text-align: center;
+            font-size: 30px;
+            color: yellow;
+            line-height: 50px;
+        }
+        div{
+            margin: 0 auto;
+            width: 450px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span></span>
+    </div>
+    <span></span>
+    <script>
+        function showTime(){
+            let date = new Date()
+            let year = date.getFullYear()
+           let month = date.getMonth()+1
+           let day = date.getDate()
+           let hour = date.getHours()
+           hour = hour<10?('0'+hour):hour
+           let minute = date.getMinutes()
+           minute = minute<10?('0'+minute):minute
+           let second = date.getSeconds()
+           second = second<10?('0'+second):second
+           let week = date.getDay()
+             switch(week){
+                case 0:
+                    week='天'
+                    break  
+                case 1:
+                    week='一'
+                    break
+                case 2:
+                    week='二'
+                    break
+                case 3:
+                    week='三'
+                    break
+                case 4:
+                    week='四'
+                    break   
+                case 5:
+                    week='五'
+                    break 
+                case 6:
+                    week='六'
+                    break   
+            }
+            
+        document.querySelector('span').innerHTML=`${year}年${month}月${day}日星期${week}${hour}:${minute}:${second}`
+        }
+        showTime()
+        setInterval(function(){
+        showTime()
+        },1000)
+    </script>
+</body>
+</html>

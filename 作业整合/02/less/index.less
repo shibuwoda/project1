@@ -1,0 +1,67 @@
+// out: ../css/
+@import url(./base.less);
+@import url(./normalize.less);
+
+//根字号
+@rootFontSize: 37.5 * 1rem;
+
+body {
+    background-color: #F0F0F0;
+}
+.main{
+    padding-bottom: (50/@rootFontSize);
+    
+    .banner{
+        height: (160/@rootFontSize);
+    }
+
+    .title{
+        height: (40/@rootFontSize);
+        line-height: (40/@rootFontSize);
+        margin-left: (15/@rootFontSize);
+        h4{
+            font-size: (14/@rootFontSize);
+            color: #3c3c3c;
+        }
+    }
+
+    .items{
+        position: relative;
+        margin-bottom: (10/@rootFontSize);
+         
+        .pic{
+            height: (160/@rootFontSize);
+            i{
+                position: absolute;
+                top: (15/@rootFontSize);
+                right: (18/@rootFontSize);
+                font-size: (24/@rootFontSize);
+                color: black;
+            }
+
+            .active{
+                position: absolute;
+                left: (15/@rootFontSize);
+                top: (-4/@rootFontSize);
+                width: (68/@rootFontSize);
+                height: (29/@rootFontSize);
+                background-image: url(../images/status_active.png);
+                background-size: contain;
+                font-size: (12/@rootFontSize);
+                color: #fff;
+            }
+        }
+        .txt{
+            background-color: #fff;
+            padding: (10/@rootFontSize)(15/@rootFontSize);
+        }
+    }
+}
+.footer{
+    height: (50/@rootFontSize);
+    background-color: #FECA49 ;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

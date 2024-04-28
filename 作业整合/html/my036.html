@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 140px;
+            height: 140px;
+            /* border: 1px solid black; */
+            background-image: url(../img/bg.png);
+            animation: run 1s steps(12) infinite,remove 4s linear forwards ;
+        }
+        @keyframes run{
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -1680px 0;
+            }
+        }
+        @keyframes remove{
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(1200px);
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    
+</body>
+</html>

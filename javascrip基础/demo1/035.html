@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fn()">点我生成随机数</button>
+    <button onclick="fn2()">求其平方</button>
+    <script>
+        let a;
+        function fn(){
+            a = Math.random()*100
+            console.log(a);
+        }
+        function fn2(){
+             console.log(Math.sqrt(a));
+        }
+        let num = 3.1454
+        console.log(Math.ceil(num));
+        console.log(Math.floor(num));
+        console.log(Math.round(num));
+        console.log(Math.ceil(num));
+        console.log((Math.random()*100).toFixed(2));
+
+
+    </script>
+</body>
+</html>

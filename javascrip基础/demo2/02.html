@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./../../jquery/jquery-3.5.1.min.js"></script>
+</head> 
+<body>
+    <input type="file">
+    <button>确认上传文件</button>
+    <script>
+        $('button').click(function(){
+            if(document.querySelector('[type=file]').files.length<=0){
+                return alert('文件未上传')
+            }
+            let files = document.querySelector('[type=file]')
+           let fd= new FormData()
+           fd.append('avatar',files[0])
+        })
+        
+    </script>
+</body>
+</html>

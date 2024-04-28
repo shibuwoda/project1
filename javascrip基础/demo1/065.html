@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			img{
+				width: 200px;
+				height: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="./../img/baidu.png" alt="" class="pic1" />
+		<br />
+		<button onclick="fn1()">删除我吧</button>
+		<br />
+		<img src="./imgs/01.gif" alt="" class="pic2" />
+		<br />
+		<button onclick="fn2()">换换我吧</button>
+		<script>
+			function fn1(){
+				document.querySelector('.pic1').style.display='none'
+			}
+			function fn2(){
+				document.querySelector('.pic2').src='./../img/baidu.png'
+			}
+		</script>
+	</body>
+</html>

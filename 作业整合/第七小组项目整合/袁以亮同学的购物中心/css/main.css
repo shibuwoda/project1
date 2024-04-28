@@ -1,0 +1,368 @@
+/* banner修饰 */
+.banner{
+    position: relative;
+    height: 500px;
+    background-color: #f5f5f5;
+}
+.aside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, .8);
+}
+.banner .aside li{
+    display: inline-block;
+    width: 250px;
+    line-height: 50px;
+}
+.banner .aside li a{
+    position: relative;
+    display: block;
+    width: 250px;
+    padding-left: 36px;
+    color: #fff;
+    font-size: 16px;
+
+}
+.banner .aside li a span{
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 15px;
+
+
+}
+.banner .aside li a:hover{
+    background-color: palegreen;
+    color: #000;
+}
+.banner .aside a::after{
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    content: '';
+    width: 6px;
+    height: 11px;
+    
+    background-image: url(../images/sprites.png);
+    background-position: -80px -110px;
+}
+.prev,
+.next{
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .2);
+    background-image: url(../images/sprites.png);
+}
+.prev{
+    left: 260px;
+    background-position: 14px -60px;
+}
+.next{
+    right: 10px;
+    background-position: -23px -60px;
+}
+.banner ol{
+    position: absolute;
+    bottom: 30px;
+    left: 680px;
+    /* width: 200px ; */
+    height: 10px;
+
+}
+.banner ol li{
+    float: left;
+    margin-right: 24px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .4);
+    cursor: pointer;
+}
+.banner ol .current{
+    background-color: #fff;
+}
+
+/* 新鲜好物 */
+.goods .hd{
+    height: 100px;
+    /* background-color: palegreen; */
+}
+.goods .hd h2{
+    font-size: 29px;
+    font-weight: 400;
+    float: left;
+}
+.goods .hd h2 span{
+    color: #999;
+    font-size: 16px;
+    margin-left: 34px;
+}
+.goods .hd a{
+    font-style: 12px;
+    color: #999;
+    float: right;
+    line-height: 45px;
+    margin-right: 20px;
+}
+.bd li{
+    position: relative;
+    overflow: hidden;
+}
+.bd img{
+    transition: all 0.5s;
+}
+.mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 304px;
+    height: 304px;
+    background-image: linear-gradient(
+        transparent,
+        rgba(196, 186, 186, 0.6)
+    );
+    opacity: 0;
+    transition: all 0.5s;
+}
+.bd .txt{
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    padding-left: 20px;
+    transition: all 0.5s;
+
+
+}
+/* 鼠标悬浮提示 */
+.bd li:hover .txt{
+    bottom: 100px;
+}
+/* 鼠标悬浮图片放大 */
+.bd li:hover img{
+    transform: scale(1.2);
+
+}
+/* 鼠标悬浮渐变 */
+.bd li:hover .mask{
+    opacity: 1;
+
+}
+.goods .hd a::after{
+    display: inline-block;
+    margin-left: 13px;
+    content: '';
+    width: 7px;
+    height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+    vertical-align: middle;
+}
+.bd ul li{
+    position: relative;
+    width: 304px;
+    height: 405px;
+    margin-right: 8px;
+    text-align: center;
+    background-color: #f0f9f4;
+    float: left;
+}
+.bd ul li:nth-child(4){
+    margin-right: 0;
+}
+.bd ul li a{
+    display: block;
+    width: 314px;
+    height: 304px;
+    overflow: hidden;
+}
+.bd ul li a img{
+    width: 304px;
+}
+.bd ul li h3{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.bd ul li div{
+    font-size: 17px;
+    color: #9a2e1f;
+}
+.bd ul li div span{
+    font-size: 23px;
+}
+.bd ul li b{
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    width: 28px;
+    height: 80px;
+    border: 1px solid #27ba9b;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #27ba9b;
+}
+
+.shengxian .hd1{
+    height: 96px;
+    /* background-color: pink; */
+    line-height: 96px;
+}
+.hd1 h2{
+    font-size: 29px;
+    font-weight: 400;
+    float: left;
+}
+.shengxian .hd1 .more { 
+    color: #999;
+    float: right;
+}
+.shengxian .hd1 div ul {
+    float: right;
+}
+.shengxian .hd1 div ul li {
+    float: left;
+    margin-right: 24px;
+    text-align: center;
+    
+}
+.shengxian .hd1 div ul li a{
+    text-align: center;
+    padding: 5px 5px;
+}
+.shengxian1 .hd1 div ul li:nth-child(1) a{
+    background-color: palegreen;
+}
+.shengxian .hd1 div ul li:nth-child(6){
+    margin-right: 50px;
+}
+.shengxian .hd1 div ul li a:hover{
+    background-color: palegreen;
+}
+.left{
+    float: left;
+
+    width: 240px;
+    height: 610px;
+}
+.right{
+    float: left;
+
+    width: 1000px;
+    height: 610px;
+}
+.right ul{
+    float: left;
+}
+.right ul li{
+    float: left;
+    margin: 8px ;
+    width: 220px;
+    height: 290px;
+
+    text-align: center;
+}
+.right ul li a{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: block;
+}
+.right ul li h4{
+   text-align: center;
+   color: #333;
+   margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.right ul li div{
+    font-size: 17px;
+    color: #9a2e1f;
+}
+.right ul li div span{
+    font-size: 23px;
+}
+.right ul li a img{
+    width: 200px;
+    height: 200px;
+    transition: all 0.5s;
+}
+.bd1 .right ul li{
+    position: relative;
+    overflow: hidden;
+}
+/* .bd1 .right ul li a img{
+    transition: all 0.5s;
+} */
+.bd1 .right li:hover  a img{
+    transform: scale(1.2);
+}
+
+.bd1 .right li .mask2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+        transparent,
+        rgba(196, 186, 186, 0.6)
+    );
+    opacity: 0;
+    transition: all 0.5s;
+}
+.bd1 .right li:hover .mask2{
+    opacity: 1;
+}
+.chengshan .hd1 div ul li:nth-child(5) a{
+    background-color: palegreen;
+}
+/* .chengshan .hd1 div ul li:nth-child(1) a{
+    background-color: white;
+} */
+/* 走马灯 */
+.zou{
+    width: 1200px;
+    height: 300px;
+    background-color: pink;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    overflow: hidden;
+}
+.zou ul{
+    width: 3300px;
+    animation: move 10s linear infinite;
+}
+.zou ul li a img{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+.zou ul li{
+    float: left;
+}
+@keyframes move{
+    to{
+        transform: translateX(-2100px);
+    }
+}
+.zou:hover ul{
+    animation-play-state: paused;
+}
+.zou li:hover a img{
+    transform: scale(1.2);
+    transition: all 0.5s;
+} 
+.zou li a{
+    display: block;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+/* 走马灯 */

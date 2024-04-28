@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+.box{
+    position: relative;
+    height: 100%;
+    background-image: url(./f1_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+img{
+    position: absolute;
+}
+.box img:nth-child(1){
+    left: 400px;
+    top: 20px;
+    animation: clound 1s linear infinite alternate;
+}
+.box img:nth-child(2){
+    left: 1100px;
+    top: 70px;
+    animation: clound 1s linear infinite alternate 0.2s;
+}
+.box img:nth-child(3){
+    left: 280px;
+    top: 180px;
+    animation: clound 1s linear infinite alternate 0.4s;
+}
+@keyframes clound{
+    to{
+        transform: translateX(-30px);
+    }
+}
+@keyframes remove{
+    to{
+        transform: translateY(30px);
+    }
+}
+.box img:nth-child(4){
+    left: 327px;
+    top: 520px;
+    animation: remove 1s linear infinite alternate;
+}
+.box img:nth-child(5){
+    left: 570px;
+    top: 520px;
+    animation: remove 1s linear infinite alternate 0.2s;
+}
+.box img:nth-child(6){
+    left: 815px;
+    top: 520px;
+    animation: remove 1s linear infinite alternate 0.4s;
+}
+.box img:nth-child(7){
+    left: 1060px;
+    top: 520px;
+    animation: remove 1s linear infinite alternate 0.1s;
+}
+.box img:nth-child(8){
+    left: 400px;
+    top: 160px;
+    animation: remove 1s linear infinite alternate 0.1s;
+}
+.box img:nth-child(9){
+    left: 400px;
+    top: 200px;
+    transform: scale(0.8);
+}

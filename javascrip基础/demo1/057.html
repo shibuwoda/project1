@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="t">
+    <button>按我添加到列表项中</button>
+    <ul></ul>
+    <script>
+    let uls = document.querySelector("ul");
+    let btns = document.querySelectorAll("button");
+    btns[0].onclick = function(){
+    let txt = document.getElementById("t");
+    let li = document.createElement('li');
+    li.innerHTML= txt.value;
+    uls.appendChild(li);
+    }
+    </script>
+</html>

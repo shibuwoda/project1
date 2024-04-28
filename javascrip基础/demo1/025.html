@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function f1 () {
+				var sum=0;
+				let arr=[];
+				for (let i = 0; i <6; i++) {
+				let score=prompt(`请输入第${i+1}个成绩`);
+				arr.push(Number(score));
+				sum+=score
+				}
+				console.log(arr);
+				document.getElementById("p1").innerHTML=`输入的6门成绩是${arr}`;
+			var max=arr[0];
+			var min=arr[0];
+			var j,k;
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i]>max) {
+					max=arr[i];
+					j=i;
+				}
+				if(arr[i]<min){
+					min=arr[i];
+					k=i;
+			}
+		}
+		document.getElementById("p2").innerHTML=`最大值是${max},最小值是${min}`;
+		document.getElementById("p3").innerHTML=`平均值是${(sum/6).toFixed(2)}`;
+		document.getElementById("p4").innerHTML=`排序以后是${arr.sort((a,b)=>b-a)}`;
+
+	}
+		
+		
+		</script>
+		<button onclick="f1()">点我进行操作</button>
+		<p id="p1"></p >
+		<p id="p2"></p >
+		<p id="p3"></p >
+		<p id="p4"></p >
+	</body>
+</html>

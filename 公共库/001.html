@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .nav{
+            width: 200px;
+            font-size: 12px;
+            margin: 0 auto;
+
+        }
+        .orange{
+            color: #f40;
+        }
+        .father{
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: palegreen;
+        }
+        .son{
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            /* margin-top: -50px;
+            margin-left: -100px */
+            /* transition: all 1s; */
+        }
+        /* .father:hover .son{
+            transform: translate(0,50%);
+        } */
+
+    </style>
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+</head>
+<body>
+    <i class="iconfont icon-favorites-fill"></i>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="">
+                    <span class="iconfont icon-cart-Empty-fill orange"></span>
+                    <span>购物车</span>
+                    <span class="iconfont icon-arrow-down"></span>
+                    <input type="number">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <input type="number">
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+   
+
+</body>
+</html>

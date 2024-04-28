@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button>点我</button>
+		<div></div>
+		<script>
+			document.querySelector('button').addEventListener('click',function(){
+				let img = document.createElement('img')
+				img.src='./imgs/01.gif'
+				document.querySelector('div').appendChild(img)
+			})
+		</script>
+	</body>
+</html>

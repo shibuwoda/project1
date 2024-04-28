@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <button id="spring">春天</button>
+<button id="summer">夏天</button>
+<button id="autumn">秋天</button>
+<button id="winter">冬天</button>
+<p></p>
+<img src="../img/图片1.png" width="200" height="180">
+<script>
+// 1. 获取元素
+var spring = document.getElementById('spring');
+var summer = document.getElementById('summer');
+var autumn = document.getElementById('autumn');
+var winter = document.getElementById('winter')
+//请补充代码
+var img = document.querySelector('img');
+// 2. 注册事件处理程序
+spring.onclick = function () {
+img.src = '../img/baidu.png';
+img.title = '春天';
+};
+summer.onclick = function () {
+img.src = '../img/bg.png';
+img.title = '夏天';
+};
+autumn.onclick = function () {
+img.src = '../img/w3s.gif';
+img.title = '秋天';
+};
+winter.onclick = function () {
+img.src = '../img/图片1.png';
+img.title = '冬天';
+};
+//请补充代码
+</script>
+
+</body>
+</html>

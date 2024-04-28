@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    宝贝1单价：<input type="text" id="price1"> 数量：<input type="text" id="num1">件<br>
+    宝贝1单价：<input type="text" id="price2"> 数量：<input type="text" id="num2">件<br>
+    运送方式：<input type="radio" name="r" checked value="快递">快递<input type="radio" name="r" value="邮递">邮递<input type="radio"
+        name="r" value="EMS">EMS<br>
+    运费：<input type="text" id="price3">元<br>
+    <button>我要确认订单</button><br>
+    <textarea name="" id="result" cols="15" rows="5"></textarea> 
+    <script>
+        document.querySelector('button').addEventListener('click', function () {
+            let price1 = document.querySelector('#price1').value
+            let num1 = document.querySelector('#num1').value
+            let price2 = document.querySelector('#price2').value
+            let num2 = document.querySelector('#num2').value
+            let price3 = +document.querySelector('#price3').value
+            let way = document.querySelector("input[type='radio']:checked").value
+            if(!price1|!num1|!price2|!num2|!price3){
+                alert('有信息为空！请补全表单后再试。')
+            }else{
+                document.querySelector('textarea').value=`您的订单总额为${num1*price1+num2*price2+price3}元，运送方式为${way}`
+            }
+        })
+    </script>
+</body>
+
+</html>

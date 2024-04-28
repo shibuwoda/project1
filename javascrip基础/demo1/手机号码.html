@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button onclick="fn()">点我隐藏手机号码</button>
+    <p>昵称：<input type="text" id="n"></p>
+    <p>密码：<input type="text" id = "p"></p>
+    <button onclick="fn2()">确定</button>
+    <script>
+        function fn(){
+        let tel =document.querySelector('input').value
+        let str = tel.substring(0,3)+"****"+tel.substr(tel.length-4)
+        document.querySelector('input').value = str
+        }
+        function fn2(){
+            let name = document.querySelector('#n').value
+            let pswflag
+            let nameflag
+            for(let i in name){
+                let w = name.charAt(i);
+                if(!(w>"0"&&w<"9")||(w>"a"&&w<"z")||(w>"A"&&w<"z")){
+                    alert("用户名不合法")
+                }else{
+                    nameflag = true
+                }
+            }
+            let password = document.querySelector('#p').value
+            if(password.length<3||password.length>10){
+                alert("密码长度在3-10之间")
+            }else{
+                pswflag = true
+            }
+            if(pswflag&&nameflag){
+                location.href = "https://www.baidu.com/"
+            }
+        }
+    </script>
+</body>
+</html>

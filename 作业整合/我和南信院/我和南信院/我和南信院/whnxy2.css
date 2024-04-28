@@ -1,0 +1,142 @@
+.word3{
+	background-color: #F5E79E;
+	width: 1000px;
+	height: 40px;
+	float: center;
+	margin:30px auto 0 ;
+}
+.word3 h2{
+	color: #EB9316;
+}
+.bigbox{
+	width: 1200px;
+	height: 370px;
+	/* background-color: red; */
+	margin: 10px auto 0px;
+	
+}
+.item{
+	width: 280px;
+	height: 370px;
+	/* border:1px solid #0000FF; */
+	background-color: #0086B3;
+	float: left;
+	margin: 0px 10px;
+	position: relative;
+}
+.item .item-mask{
+	width: 280px;
+	height: 370px;
+	background-color: rgba(0,0,0,0);
+	position: absolute;
+	top: 0;
+	left: 0px;
+	transition: background-color ease .5s;
+}
+.item.item-title{
+	border: 1px solid red;
+	position: absolute;
+	top: -50px;
+	left:20px;
+	color: white;
+	font-size: 20px;
+	transition: all ease .5s;
+}
+.item:hover .item-mask{
+	background-color: rgba(0,0,0,0.5);
+}
+.item:hover .item-title{
+	top: 250px;
+}
+
+.bigbox2{
+	width: 1200px;
+	height: 370px;
+	/* background-color: red; */
+	margin: 60px auto 0px;
+	
+}
+.item2{
+	width: 280px;
+	height: 370px;
+	/* border:1px solid #0000FF; */
+	background-color: #0086B3;
+	float: left;
+	margin: 0px 10px;
+	position: relative;
+}
+.item2 .item2-mask{
+	width: 280px;
+	height: 370px;
+	background-color: rgba(0,0,0,0);
+	position: absolute;
+	top: 0;
+	left: 0px;
+	transition: background-color ease .5s;
+}
+.item2.item-title{
+	border: 1px solid red;
+	position: absolute;
+	top: -50px;
+	left:20px;
+	color: white;
+	font-size: 20px;
+	transition: all ease .5s;
+}
+.item2:hover .item2-mask{
+	background-color: rgba(0,0,0,0.5);
+}
+.item2:hover .item2-title{
+	top: 250px;
+}
+
+.bigbox3{
+	width: 1200px;
+	height: 370px;
+	/* background-color: red; */
+	margin: 60px auto 0px;
+}
+.item3{
+	width: 280px;
+	height: 370px;
+	/* border:1px solid #0000FF; */
+	background-color: #0086B3;
+	float: left;
+	margin: 0px 10px;
+	position: relative;
+}
+.item3 .item3-mask{
+	width: 280px;
+	height: 370px;
+	background-color: rgba(0,0,0,0);
+	position: absolute;
+	top: 0;
+	left: 0px;
+	transition: background-color ease .5s;
+}
+.item3.item-title{
+	border: 1px solid red;
+	position: absolute;
+	top: -50px;
+	left:20px;
+	color: white;
+	font-size: 20px;
+	transition: all ease .5s;
+}
+.item3:hover .item3-mask{
+	background-color: rgba(0,0,0,0.5);
+}
+.item3:hover .item3-title{
+	top: 250px;
+}
+.word4{
+	width: 100%;
+	height: 50px;
+	background-color: #F5E79E;
+	margin: 100px auto 0px;
+}
+.word4 h4{
+	color: #EB9316;
+	text-align: center;
+	margin: 20px auto 0;
+}

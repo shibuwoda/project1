@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮 1</button> <button>按钮 2</button>
+<button>按钮 3</button> <button>按钮 4</button>
+<script>
+var btns = document.querySelectorAll('button');// 获取所有按钮元素
+// 为所有按钮元素注册相同事件处理函数
+for (var i = 0; i < btns.length; i++) {
+btns[i].onclick = changeColor; }
+function changeColor () {
+for (var j = 0; j < btns.length; j++) {
+if (btns[j] === this) {
+this.style.backgroundColor = 'pink';// 设置当前按钮的背景颜色
+} else {
+btns[j].style.backgroundColor = '';// 去掉其他按钮的背景颜色
+} } }
+</script>
+</body>
+</html>

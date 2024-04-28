@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+        <p></p>  
+		<button onclick="f1()">点我开始抽奖</button>
+		<script>
+			
+		// 假设已知的中奖号码
+		const winningNumber = [11,22,33,44,55,66,77,88,99];
+		
+		
+		// 判断是否中奖
+		function f1(){
+			let result;
+			userNumber = Math.floor(Math.random()*100)
+            let flag = false;
+            for(let i = 0;i<winningNumber.length;i++){
+                if(userNumber==winningNumber[i]){
+                    flag = true;
+                }
+            }
+			if (flag) {
+			   result = "恭喜您，中奖"
+			} else {
+			    result = "很遗憾，您没有中奖。";
+			}
+		    document.querySelector('p').innerHTML=`您抽到的数字是${userNumber},${result}`
+		}
+		
+		</script>
+		
+	</body>
+</html>

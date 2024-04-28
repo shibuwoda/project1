@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t">
+    <input type="text" id="p">
+    <button></button>
+    <script>
+        function show(){
+            let text =document.querySelector("#t").value;
+            let password=document.querySelector("#p").value;
+            document.write(`昵称是${text}密码是${password}`)
+        }
+        document.querySelector('button').addEventListener('click',function(){
+            show()
+        })
+
+    </script>
+    
+</body>
+</html>

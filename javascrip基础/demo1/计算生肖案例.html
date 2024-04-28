@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+            font-size: 20px;
+        }
+        span{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    请输入你的出生年份：<input type="text"><button onclick="fn()">显示生肖</button>
+    你的生肖是：<span></span>
+    <script>
+        function fn(){
+            let year= document.querySelector("input[type='text']").value
+            let shengxiao=''
+            let animals= year%12
+            switch(animals){
+                case 0:   
+                 shengxiao="猴"
+                 break
+                 case 1:
+                 shengxiao="鸡"
+                 break
+                 case 2:   
+                 shengxiao="狗"
+                 break
+                 case 3:
+                 shengxiao="猪"
+                 break
+                 case 4:   
+                 shengxiao="鼠"
+                 break
+                 case 5:
+                 shengxiao="牛"
+                 break
+                 case 6:   
+                 shengxiao="虎"
+                 break
+                 case 7:
+                 shengxiao="兔"
+                 break
+                 case 8:   
+                 shengxiao="龙"
+                 break
+                 case 9:
+                 shengxiao="蛇"
+                 break
+                 case 10:   
+                 shengxiao="马"
+                 break
+                 case 11:
+                 shengxiao="羊"
+                 break
+                 
+
+            }
+            document.querySelector('span').innerHTML=shengxiao  
+
+            
+        }
+    </script>
+</body>
+</html>

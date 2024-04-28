@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./../jquery/jquery-3.5.1.min.js"></script>
+	</head>
+	<body>
+		<button id="get">点我</button>
+	</body>
+	
+	<script>
+		$(function(){
+			$('#get').on('click',function(){
+				$.get('www.baidu.com',function(res){
+					console.log(res);
+				})
+			})
+		})
+	</script>
+</html>

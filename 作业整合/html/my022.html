@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image {  
+            position: absolute;  
+            width: 100px; /* 设置图片的宽度 */  
+            height: 100px; /* 设置图片的高度 */  
+            animation: moveAndBounce 5s infinite; /* 设置动画 */  
+        }  
+  
+        @keyframes moveAndBounce {  
+            0% { transform: translateX(0); } /* 初始位置 */  
+            50% { transform: translateX(100px); } /* 中间位置 */  
+            100% { transform: translateX(0); } /* 结束位置 */  
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">  
+        <img src="your-image.jpg" id="image" />  
+    </div>
+
+</body>
+</html>

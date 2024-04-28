@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./../../jquery/jquery-3.5.1.min.js"></script>
+    <style>
+        ul{
+            list-style: none ;
+        }
+    </style>
+</head>
+<body>
+    姓名：<input type="text" class="name" />
+    <br />
+    留言：<input type="text" class="message" />
+    <br />
+    <button>确定</button>
+    <p>网友留言列表:</p>
+    <ul>
+        <li></li>
+    </ul>
+    <script>
+        $('button').click(function(){
+            let li = document.createElement('li')
+            let date=new Date()
+			li.innerHTML=$('.name').val()+'发表：'+$('.message').val()+date.toLocaleDateString()+date.toLocaleTimeString()
+            $('ul').append(li)
+            $('.name').val('')
+            $('.message').val('')
+        })
+    </script>
+</body>
+</html>
