@@ -1,0 +1,63 @@
+*{
+    margin:0 0;
+    padding:0 0;
+}
+/* 标题 */
+.biaoti{
+    width: 1000px;
+    height: 110px;
+    background-color: gray;
+    margin: auto;
+    text-align: center;
+}
+
+.biaoti  ul {
+  list-style: none;
+
+}
+li:first-child{
+ margin-left: 150px;
+}
+.biaoti ul  li a{
+    text-decoration: none;
+    float: left;
+    color: black;
+    font-size: 20px;
+    margin-right:240px;
+    
+}
+hr{
+    color: black;
+}
+/* 主体 */
+.bd ,.bb ,.dd{
+    margin: auto;
+width: 1000px;
+height: 200px;
+/* background: gray; */
+position: relative;
+}
+.zhuti ,.bichu ,.xiyifang{
+    width: 400px;
+    height: 100px;
+    text-align: center;
+   
+}
+.zhuti span ,.bichu span ,.dd span{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.bd img ,.bb img ,.dd img{
+width: 350px;
+height: 200px;
+position: absolute;
+right: 0px;
+top: 0px;
+}
+p{
+    background-color: #f9cd9e;
+}
+

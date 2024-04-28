@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function add(x,...arr){
+            for(let i=0 ; i<arr.length;i++){
+                x+=arr[i]
+            }
+            return x
+        }
+        console.log(add(1,2,3));
+    </script> -->
+    <!-- <script>
+        function f1(name,say='hello'){
+            console.log(say+name);
+        }
+        function f2(say='hello',name){
+            console.log(say+name);
+        }
+        f2('王美丽')
+
+    </script> -->
+    <script>
+        // //默认参数 ES6新增的
+        // function f1(name,say ="hello")
+        // console.log(say + name);
+        // f1("王美丽");//?
+        // function f2(say ="hello",name)
+        // console.log(say + name);
+        // f2("王美丽");//?
+        function sum(x=3,y=5){
+            return x + y;
+        }
+        console.log(sum(10,20));//?
+        console.log(sum(10));//?
+        console.log(sum());//?
+    </script>
+</body>
+</html>

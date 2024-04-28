@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr =['pink','green','red']
+        // for(let i = 0;i<arr.length;i++){
+        //     arr[i] = arr[i]+'老师'
+        // }
+        // alert(arr)
+        // console.log(arr);
+        // let a = arr.push('yellow','black')
+        // console.log(arr)
+        // console.log(a)
+
+        // let arr =[]
+        // for(let i =1;i<=4;i++){
+        //     arr.push(prompt=(`请输入第${i}季度的值`))
+
+        // }
+
+            
+        //1.声明累加数组
+        let arr = []
+        //2.循环遍历
+        while( arr.length < 5 ){
+            //输入年龄
+            let num = +prompt(`请输入第${arr.length+1}个人有效年龄`)
+            //判断是否有效
+            if( num > 0 && num < 100){
+                //添加到数组
+                arr.push(num)
+            }else{
+                alert(`输入年龄无效,请重新输入`)
+            }
+        }
+        console.log(arr);
+        let newArr =[]
+        for(let i = 0;i<arr.length;i++){
+            if(arr[i]>=18){
+                newArr.push(arr[i])
+            }
+        }
+        console.log(newArr)
+        
+        let sum = 0
+    </script>
+</body>
+</html>

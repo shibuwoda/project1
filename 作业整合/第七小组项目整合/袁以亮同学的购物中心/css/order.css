@@ -1,0 +1,198 @@
+body{
+    background-color: #f7f7f8;
+}
+/* 公用属性 */
+.red{
+    color: #cf4444;
+}
+.pannel{
+    color: #262626;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+/* 订单 */
+.main{
+    background-color: #f7f7f8;
+    margin-bottom: 80px;
+}
+.location{
+    width: 30px;
+	height: 30px;
+	background-image: linear-gradient(90deg, 
+		#6fc2aa 5%, 
+		#54b196 100%);
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%; 
+    color:#fff; 
+    margin-right: 10px;  
+
+}
+.use{
+    flex: 1;
+}
+.top{
+    display: flex;
+}
+.top h5{
+    font-size: 15px;
+    width: 55px;
+}
+.top p{
+    font-style: 13px;
+}
+.bottom{
+    font-size: 12px;
+    margin-top: 5px;
+
+}
+.more a{
+    display: block;
+    line-height: 44px;
+    text-align: center;
+    color: #808080;
+    width: 44px;
+    height: 44px;
+    /* background-color: pink; */
+}
+.user{
+    padding: 15px 0 14px 11px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.goods{
+    padding: 11px 0 11px 11px;
+    display: flex;
+}
+.pic img{
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+}
+.txt{
+    flex: 1;
+   
+}
+.txt1{
+    font-size: 13px;
+    font-weight: 400;
+    color: #262626;
+}
+.txt2{
+    font-size: 11px;
+    color: #888;
+    line-height: 20px;
+    text-align: center;
+}
+.txt3{
+    font-size: 9px;
+}
+.txt3 i{
+    font-size: 16px;
+}
+.txt4{
+    background-color: #f7f7f8;
+    width: 90px;
+    height: 20px;
+    font-size: 11px;
+    color: #888;
+    line-height: 20px;
+    text-align: center;
+}
+.txt5{
+    font-size: 9px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.count{
+    width: 44px;
+    height: 44px;
+    /* background-color: pink; */
+    line-height: 44px;
+    text-align: center;
+}
+.rest{
+    padding: 14px 15px 16px 13px;
+}
+.rest div{
+    display: flex;
+    font-size: 13px;
+    color: #262626;
+    font-weight: 400;
+    margin-bottom: 29px;
+    align-items: center;
+}
+.rest h5{
+    margin-right: 19px;
+}
+.rest div:nth-child(2) p{
+    font-size: 12px;
+    color: #989898;
+}
+.rest div:nth-child(3){
+    margin-bottom: 0;
+}
+.rest div:nth-child(2n+1){
+    justify-content: space-between;
+}
+.price{
+    padding: 14px 16px 16px 13px;
+   
+    font-size: 13px;
+    color: #262626;
+    font-weight: 400;
+    margin-bottom: 29px;
+    align-items: center;
+}
+.price div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.price div:nth-child(3){
+    margin-bottom: 0;
+}
+
+/* 订单 */
+/* 支付 */
+.pay{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #ededed;
+    height: 80px;
+    /* background-color: pink; */
+    padding: 0 11px;
+    justify-content: space-between;
+    align-items: center;
+}
+.left{
+    font-size: 12px;
+}
+.left span i{
+    font-size: 20px;
+}
+.right a{
+    display: block;
+    width: 90px;
+    height: 35px;
+    background-color: #fff;
+    background-image: linear-gradient(90deg, 
+		#6fc2aa 5%, 
+		#54b196 100%);
+    border-radius: 3px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+
+
+}
+/* 支付 */

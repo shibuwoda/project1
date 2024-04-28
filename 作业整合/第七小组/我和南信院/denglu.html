@@ -1,0 +1,98 @@
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+		    <meta charset="UTF-8">
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <title>登陆页面</title>
+		        <!-- author xjt -->
+		</head>
+		<body>
+		    <div class="login">
+		        <h2>登陆</h2>
+		        <div class="login_form">
+		            <span>账号：</span>
+		            <input type="text" placeholder="请输入账号">
+		            <br>
+		            <span>密码：</span>
+		            <input type="password" placeholder="请输入密码">
+		        </div>
+		        <div class="btn">
+		            <button class="login_btn" onclick="login()">登录</button>
+		        </div>
+		    </div>
+		</body>
+		<script>
+		    function login(){
+		        console.log('登录按钮点击了');
+		    }
+		</script>
+		<style>
+		    body{
+		        padding: 0;
+		        margin: 0;
+		        height: 100vh;
+		        display: flex;
+		        justify-content: center;
+		        background-size: cover;
+		        flex: 1;
+		        align-items: center;
+		    }
+		    .login{
+		        text-align: center;
+		        margin: 0 auto;
+		        width: 600px;
+		        height: 520px;
+		        background-color: white;
+		        border-radius: 25px;
+		        box-shadow: black;
+		    }
+		    .login h2{
+		        margin-top: 40px;
+		        color: green;
+		        font-weight: 100;
+		    }
+		    .login_form{
+		        padding: 20px;
+		    }
+		    .login_form span{
+		        color: white;
+		        font-size: 18px;
+		        font-weight: 100;
+		    }
+		    .login_form input{
+		        background-color: green;
+		        width: 320px;
+		        padding: 2px;
+		        text-indent: 2px;
+		        color: white;
+		        font-size: 20px;
+		        height: 45px;
+		        margin: 30px 30px 30px 5px;
+		        outline: none;
+		        
+		    }
+		    input::placeholder{
+		        color: yellow;
+		        font-weight: 100;
+		        font-size: 18px;
+		        font-style: italic;
+		    }
+		    .login_btn{
+		        background-color: gray;
+		        border: 1px solid rgb(190, 225, 255);
+		        padding: 10px;
+		        width: 240px;
+		        height: 60px;
+		        border-radius: 30px;
+		        font-size: 30px;
+		        color: black;
+		        font-weight: 100;       
+		        margin-top: 15px;
+		    }
+		</style>
+		
+		</html>
+	</head>
+	<body>
+	</body>

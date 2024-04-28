@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>+++</button>
+    <button onclick="f1()">...</button>
+    <script>
+        // const num = 100
+        // console.log(num);
+        // console.log(window.num);
+        // function f1(){
+        //     return "BOM!"
+        // }
+        // console.log(f1());
+        // console.log(window.f1());
+       
+        function init(){
+            window.open("http://www.njcit.cn","南信","width=300px,height=300px")
+        }
+        function f2(){
+            window.close();
+
+        }
+        function f1(){
+            window.close(newwin);
+
+        }
+        
+        // window.onload = init()
+        document.querySelector('button').addEventListener("click",function(){
+            init()
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><input type="text"  id="t1">时</p>
+    <p><input type="text"  id="t2">分</p>
+    <p><input type="text" id="t3"/> 秒</p>
+    <button onclick="f1()">点我开始秒杀</button>
+    <p><input type="text"  id="t4">秒</p>
+    <script>
+        function f1(){
+            //第1步 获取当前时间
+            let time1 = new Date();
+            let hour1 = time1.getHours();
+            let min1 = time1.getMinutes();
+            let sec1 =time1.getSeconds();
+           //当前时间转换成秒  
+            let num1 = 60*60*hour1 + 60*min1 + sec1;         
+            //第2步 获取设定的时间
+            let hour2 = document.getElementById("t1").value;
+            let min2 = document.getElementById("t2").value;
+            let sec2 = document.getElementById("t3").value;              
+            let num2 = Number(hour2)*60*60+Number(min2)*60+Number(sec2);
+            //赋值给结果
+            let t = num2 -num1 
+            document.getElementById("t4").value = t;
+            if(t!=0){
+                setTimeout("f1()",1000)//计时器函数 每隔1秒 执行1次
+            }
+            else {
+                alert("秒杀开始！")
+            }
+        }
+    </script>
+</body>
+</html>

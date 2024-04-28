@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            img{
+                height: 250px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="./imgs/01.gif" alt="">
+        <button>删除我吧</button>
+        <button>换换我吧</button>
+        <script>
+            let btns = document.querySelectorAll('button');
+            let img = document.querySelector('img')
+            //创建节点
+            // let img = document.createElement('img');
+            // img.src = "./img/banli.jpg"
+            // img.className = "img";
+            //添加到body
+            // document.body.appendChild(img);
+            btns[0].onclick = function(){
+                //删除节点
+                document.body.removeChild(img);    
+            }
+            btns[1].onclick = function(){
+                //创建节点
+                // let img = document.createElement('img');
+                // img.src = "./imgs/th (3).jpg"
+                // img.className = "img";
+                // document.body.appendChild(img);
+            }
+        </script>
+    </body>
+</html>

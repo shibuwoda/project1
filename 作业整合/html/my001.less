@@ -1,0 +1,14 @@
+.father{
+    width: (68/35) rem;
+    .son{
+        background-color:@color;
+        &:hover{
+            background-color: @color;
+        }
+    }
+    &:hover{
+        background-color: @color;
+    }
+}
+@color:pink;
+@import './my002.less';

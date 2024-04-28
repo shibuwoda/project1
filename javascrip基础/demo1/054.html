@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab-box {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .tab-head ul {
+            list-style: none;
+            background-color: #ccc;
+            border: 1px solid gray;
+            height: 40px;
+            padding: 0px;
+        }
+
+        .tab-head li {
+            height: 40px;
+            width: 150px;
+            float: left;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .tab-head .current {
+            background-color: red;
+            color: #000;
+        }
+       .item{
+            display: none;
+        }
+        .current {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-box">
+        <div class="tab-head">
+            <ul>
+                <li class="current">商品介绍</li>
+                <li>包装与规格</li>
+                <li>商品评价</li>
+                <li>售后服务</li>
+                <li>手机社区</li>
+            </ul>
+        </div>
+        <div class="tab-body">
+            <div class="item current" >
+                此外为商品介绍模块
+            </div>
+            <div class="item">
+                此外为包装与规格模块
+            </div>
+            <div class="item" >
+                此外为商品评价模块
+            </div>
+            <div class="item">
+                此外为售后服务模块
+            </div>
+            <div class="item">
+                此外为手机社区模块
+            </div>
+        </div>
+    </div>
+    <script>
+        //1. 获取程序中的 html 元素， li 单击的标题和 5 个 div 具体的内容
+        var lis = document.querySelector('.tab-head').querySelectorAll('li'); //5 个 li 集合
+        var divs = document.querySelector('.tab-body').querySelectorAll('div');
+        //2.遍历 5 个 li 为其添加 click 事件
+        for(let i=0;i<lis.length;i++){
+            lis[i].onclick = function(){
+            for(let i in lis){
+            if(lis[i]==this){
+            lis[i].classList.add('current');
+            divs[i].classList.add('current');
+            }else{
+                lis[i].classList.remove('current');
+                divs[i].classList.remove('current');
+            }
+        }
+        }
+        }
+    </script>
+</body>
+</html>

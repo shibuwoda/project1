@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul style="list-style: none;">
+        <span>选择爱好</span>
+        <li><input type="checkbox" name="hb" value="爬山"/>爬山</li>
+        <li><input type="checkbox" name="hb" value="游泳"/>游泳</li>
+        <li><input type="checkbox" name="hb" value="攀岩"/>攀岩</li>
+        <li><input type="checkbox" name="hb" value="冲浪"/>冲浪</li>
+        <li><input type="checkbox" name="hb"value="说唱" />说唱</li>
+        </ul>
+        <button>全选</button><button>全不选</button>
+        <button>反选</button><hr><button>查看我的选择</button>
+        <p id="p1"></p>
+        <script>
+        var btns = document.querySelectorAll("button");
+        var hb = document.querySelectorAll('li input');
+        btns[0].onclick = function() {
+        for (var i = 0; i < hb.length; i++) {
+        hb[i].checked =true;
+        }
+        }// 全选
+        btns[1].onclick = function() {
+        for (var i in hb) {
+        hb[i].checked = false;
+        }
+        }// 全不选
+        btns[2].onclick = function() {
+        for (var i in hb) {
+        if (hb[i].checked == false)
+        hb[i].checked = true;
+        else
+        hb[i].checked = false;
+        }
+        }// 反选
+        btns[3].onclick = function() {
+        var p1 = document.querySelector('#p1');
+        var text = "";
+        for(var i in hb){
+        if(hb[i].checked == true ){
+        text += hb[i].value +"<br/>"
+        }
+        }
+        p1.innerHTML = text;
+        }//查看我的选择
+        </script>
+</body>
+</html>

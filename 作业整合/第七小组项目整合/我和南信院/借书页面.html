@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>图书借阅页面</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <h1>图书借阅</h1>
+  <form class="info" autocomplete="off">
+    书名：<input type="text" class="uname" name="uname" />
+    编号：<input type="text" class="age" name="age" />
+    是否是续借:
+    <select name="gender" class="gender">
+      <option value="是">是</option>
+      <option value="否">否</option>
+    </select>
+    归还日期：<input type="text" class="salary" name="salary" />
+    书架编号：<select name="city" class="city">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <button class="add">录入</button>
+  </form>
+
+  <h1>借阅记录</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>书名</th>
+        <th>编号</th>
+        <th>是否是续借</th>
+        <th>归还日期</th>
+        <th>书架编号</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      
+       
+    </tbody>
+  </table>
+
+  <div class="queren">
+    <a href="./退出页面.html">确认（登记保存）</a>
+  </div>
+  
+
+  <script>
+  
+    const data = localStorage.getItem('student-data')
+ 
+    const arr = data ? JSON.parse(data) : []
+
+    const tbody = document.querySelector('tbody')
+    // 3. 渲染模块函数
+    function render() {
+      // 遍历数组 arr，有几个对象就生成几个 tr，然后追击给tbody
+      // map 返回的是个数组  [tr, tr]
+      const trArr = arr.map(function (item, i) {
+       
+        return `
+        <tr>
+          <td>${item.stuId}</td>
+          <td>${item.uname}</td>
+          <td>${item.age}</td>
+          <td>${item.gender}</td>
+          <td>${item.salary}</td>
+          <td>${item.city}</td>
+          <td>
+            <a href="javascript:" data-id=${i}>删除</a>
+          </td>
+        </tr> 
+        `
+      })
+
+      tbody.innerHTML = trArr.join('')
+    }
+    render()
+
+
+    // 4. 录入模块
+    const info = document.querySelector('.info')
+    // 获取表单form 里面带有 name属性的元素
+    const items = info.querySelectorAll('[name]')
+    // console.log(items)
+    info.addEventListener('submit', function (e) {
+      // 阻止提交
+      e.preventDefault()
+      // 声明空的对象
+      const obj = {}
+      // obj.stuId = arr.length + 1
+      // 加入有2条数据   2 
+      obj.stuId = arr.length ? arr[arr.length - 1].stuId + 1 : 1
+      // 非空判断
+      for (let i = 0; i < items.length; i++) {
+        // console.log(items) // 数组里面包含 5个表单  name
+        // console.log(items[i]) //  每一个表单 对象
+        // console.log(items[i].name) //  
+        // item 是每一个表单
+        const item = items[i]
+        if (items[i].value === '') {
+          return alert('输入内容不能为空')
+        }
+
+        obj[item.name] = item.value
+      }
+      // console.log(obj)
+      // 追加给数组
+      arr.push(obj)
+      //  把数组 arr 存储到本地存储里面
+      localStorage.setItem('student-data', JSON.stringify(arr))
+      // 渲染页面
+      render()
+      // 重置表单
+      this.reset()
+    })
+
+
+    // 5. 删除模块
+    tbody.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        // alert(1)
+        // console.log(e.target.dataset.id)
+        // 删除数组对应的这个数据
+        arr.splice(e.target.dataset.id, 1)
+        // 写入本地存储
+        localStorage.setItem('student-data', JSON.stringify(arr))
+        // 重新渲染
+        render()
+      }
+    })
+  </script>
+</body>
+
+</html>

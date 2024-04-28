@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = +prompt('请输入学生的总人数')
+		let arr = new Array(num)//容器
+        let total=0//总分和
+        let total80=0//80以上人数
+		let flag=false//判断是否有大于80分的人
+        for(let i=0;i<num;i++){
+           let score =+prompt(`请输入第${i+1}位学生的成绩`)
+		   arr[i]=score
+           if(score<0){
+			   // 打印之前学生成绩，和平均分并退出
+			   for(let j=0;j<i;j++){
+				   document.write(`第${j+1}位学生的成绩为${arr[j]}</br>`)
+			   }
+			    document.write(`平均分为${(total/i).toFixed(2)}</br>`)
+				break
+           }else if(score>80){
+			flag=true
+            total80++
+           }
+           total+=score
+        }
+		if(flag){
+			document.write(`分数大于80分的人数有${total80}个</br>`)
+		}
+    </script>
+</body>
+</html>

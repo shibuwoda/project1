@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: #f5f5db;
+        }
+        h3{
+            text-align: center;
+            font-size: 40px;
+        }
+        input{
+            display: block;
+            margin: 0 auto;
+            background-color: pink;
+            text-align: center;
+            width: 300px;
+            height: 50px;
+            font-size: 30px;
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 300px;
+            height: 50px;
+            font-size: 20px;
+            border: 3px blue dashed ;
+        }
+        button:hover{
+            background-color: palegreen;
+        }
+        span{
+            display: block;
+            margin-top: 50px;
+            font-size: 100px;
+            font-family: "楷体";
+            text-shadow:10px 10px burlywood;
+        }
+    </style>
+</head>
+<body>
+    <h3>请输入你的出生日期</h3>
+    <input type="text" name="" id="date">
+    <button onclick="fn()">点我计算你已经度过的时光</button>
+    <span></span>
+    <script>
+        function fn(){
+            let date = document.querySelector("#date").value
+            if(date == ""){
+                alert("请在输入框输入您的生日")
+            }else{
+            let now = +new Date()//现在
+            let form = +new Date(date) //过去
+            let num = parseInt((now-form)/1000/60/60/24)
+            document.querySelector('span').innerHTML=
+            `您经过了${num}天的美好时光，生命诚可贵，接下来好好珍惜！`
+            }
+        }
+    </script>
+</body>
+</html>

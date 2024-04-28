@@ -1,0 +1,36 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+body{
+    background-color: orange;
+}
+.header{
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+    margin: auto;
+    text-align: center;
+}
+.body002{
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+    margin: auto;
+}
+li{
+    list-style: none;
+    float: right;
+    padding: 10px;
+    margin-right: 50px;
+    
+}
+.button{
+    width: 20px;
+    height: 10px;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+   padding-top: 300px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Person(name,age){
+              this.name = name;
+              this.age =age;
+          }  
+          Person.prototype.show = function(){
+              console.log(this.name + this.age);
+          }
+        //继承
+         function Student(name,age,major){
+             Person.call(this,name,age);//构造函数的继承
+             this.major = major;
+         }
+         Student.prototype = new Person();
+         let stu = new Student("张三",18,"移动2301");
+         stu.show();
+         
+         Student.prototype.show = function(){//方法重写
+             console.log(this.name+this.age+this.major);
+             
+         }
+         stu.show();
+		</script>
+	</body>
+</html>

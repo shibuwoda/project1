@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<ul><li>北京</li><li>上海</li><li>广州</li> </ul>
+	<button>在列表最后增加一个节点</button><button>在指定的位置增加一个节点</button>
+	<button>替换指定的节点</button><button>删除第一个节点</button>
+	<button>删除最后一个节点</button> <button>删除指定的节点</button>
+	<script>
+	//1.获取 ul 和 button 元素
+	var btns = document.querySelectorAll('button');
+	var uls = document.querySelector('ul');
+	var lis = document.querySelectorAll('li');
+	//任务 1： 在列表最后增加一个南京的节点
+	btns[0].onclick = function (){
+	var lis = document.createElement('li');//创建南京这个节点
+	var text = document.createTextNode("南京");
+	lis.appendChild(text);
+	uls.appendChild(lis); //把 li 插入 ul
+	}
+	//任务 2：在上海前面增加一个重庆的节点
+	btns[1].onclick = function(){
+	var lis = document.createElement('li'); //创建重庆这个节点
+	var text = document.createTextNode("重庆");
+	lis.appendChild(text);
+	//方法 1：父节点来操作：增加、删除和替换的操作都要告知父节点，才可以操作
+	//uls.insertBefore(新节点,节点的位置)
+	uls.insertBefore(lis,ul.childNodes[2]);
+	//方法 2：兄弟节点来操作
+	var shanghai = document.getElementsByTagName('li')[1];
+	shanghai.parentNode.insertBefore(lis,shanghai)
+	}//任务 3：把广州这个节点替换为成都
+	btns[2].onclick = function(){
+	var lis = document.createElement('li');//创建一个成都的节点
+	var text = document.createTextNode("成都");
+	lis.appendChild(text);
+	//方法:兄弟节点来操作
+	var guangzhou = document.getElementsByTagName('li')[2];
+	guangzhou.parentNode.insertBefore(lis,guangzhou);
+	}
+	//任务 4:删除第一个节点
+	btns[3].onclick = function(){
+	lis[0].parentNode.removeChild(lis[0]); }
+	//任务 5：删除最后一个节点
+	btns[4].onclick = function(){
+	var length = lis.length;
+	//lis[length-1].parentNode.removeChild(lis[length-1]);
+	uls.removeChild(lis[length-1]);
+	}
+	//任务 6：删除上海这个节点
+	btns[5].onclick = function(){
+	var shanghai = document.querySelectorAll('li')[1];
+	//shanghai.parentNode.removeChild(shanghai);
+	uls.removeChild(shanghai);
+	}
+	</script>
+</html>

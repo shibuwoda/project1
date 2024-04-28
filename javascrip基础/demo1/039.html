@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="f1()">点我生成十个随机数</button>
+    <span class="a"></span>
+    <button onclick="f2()">点我生成十个随机数并排序</button>
+    <span class="b"></span>       
+
+    <button onclick="f3()">点我生成十个随机数去重并排序</button>
+    <span class="c"></span>
+
+
+    <script>
+                // 生成随机数数组  
+        function generateRandomNumbers() {  
+            const numbers = [];  
+            for (let i = 0; i < 10; i++) {  
+                numbers.push(Math.floor(Math.random() * 101))  
+            }  
+            return numbers;  
+        }  
+        let arr=generateRandomNumbers()
+        // 排序函数  
+        function sortNumbers(numbers) {  
+            return numbers.sort((a, b) => a - b);  
+        }  
+        
+        // 去重函数  
+        function uniqueNumbers(numbers) {  
+            return [...new Set(numbers)];  
+        }  
+        function f1(){
+            document.querySelector('.a').innerHTML=arr
+        }
+        function f2(){
+            document.querySelector('.b').innerHTML=sortNumbers(arr)
+
+        }
+        function f3(){
+            document.querySelector('.c').innerHTML=sortNumbers(uniqueNumbers(arr))
+        }
+      
+    </script>
+</body>
+</html>

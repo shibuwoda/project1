@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="show()">点我进行成绩操作</button>
+    <span></span>
+    <script>
+        function show(){
+            let len =  +prompt('请输入学生个数')
+            let arr = []
+            arr.length = len
+            console.log(arr.length);
+            let total=0
+            for(let i=0;i<arr.length;i++){
+                arr[i]=+prompt(`请输入第${i+1}位学生的成绩`)
+                total+=arr[i]
+                
+            }
+            let max =arr[0]
+            let min = arr[0]
+            let minindex=0
+            let maxindex=0
+            for(let i = 0;i<arr.length;i++){
+                if(arr[i]<min){
+                    min = arr[i]
+                    minindex=i
+                }
+                if(arr[i]>max){
+                    max = arr[i]
+                    maxindex=i
+                }
+            }
+            document.querySelector('span').innerHTML = `
+            <p>输入的成绩为:${arr.join(',')}</p>
+            <p>总分是${total}</p>
+            <p>平均分是${(total/arr.length).toFixed(2)}</p>
+            <p>最大值是${max}下标为${maxindex}</p>
+            <p>最小值是${min}下标为${minindex}</p>
+            <p>成绩升序排序为${arr.sort((a,b)=>a-b)}</p>
+            `
+            
+        }
+    </script>
+</body>
+</html>

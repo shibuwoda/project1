@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    手机号码：<input type="text" name="" id="">
+    <button >发送</button>
+    <script>
+		let button = document.querySelector('button')
+        button.addEventListener('click',function(){
+            this.innerHTML="还剩下60秒"
+            let sec = 60
+            this.disabled = true
+            let clock = setInterval(function(){
+               button.innerHTML=`还剩下${sec--}秒`
+                if(sec==0){
+					button.innerHTML="发送"
+					button.disabled = false
+					clearInterval(clock)
+				}
+            },1000)
+			
+        })
+    </script>
+</body>
+</html>

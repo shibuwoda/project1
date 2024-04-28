@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>自动关闭页面</title>
+  <style>
+    #countdown {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="countdown">您登记的书本已保存本页面将在 <span id="timer">3</span> 秒后自动关闭</div>
+
+  <script>
+    // 获取倒计时元素和初始倒计时时间
+    const countdownElement = document.getElementById('timer');
+    let countdown = 3;
+
+    // 定义倒计时函数
+    function startCountdown() {
+      countdown--;
+      countdownElement.textContent = countdown;
+
+      // 如果倒计时为0，则关闭页面
+      if (countdown === 0) {
+        clearInterval(timer);
+        window.location.href="./我和图书馆.html";
+      }
+    }
+
+    // 每秒执行一次倒计时函数
+    const timer = setInterval(startCountdown, 1000);
+  </script>
+</body>
+</html>

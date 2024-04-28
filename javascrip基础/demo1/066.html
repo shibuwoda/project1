@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			ul{
+				list-style: none ;
+			}
+		</style>
+	</head>
+	<body>
+		姓名：<input type="text" class="name" />
+		<br />
+		留言：<input type="text" class="message" />
+		<br />
+		<button>确定</button>
+		<p>网友留言列表:</p>
+		<ul>
+			<li></li>
+		</ul>
+		<script>
+			document.querySelector('button').onclick=function(){
+				let name = document.querySelector('.name')
+				let message = document.querySelector('.message')
+				if(name.value.trim()==''||message.value.trim()==''){
+					name.value=''
+					message.value=''
+					return alert('输入内容为空请重新输入')
+				}
+				let date = new Date()
+				let time = date.toLocaleDateString()+date.toLocaleTimeString()
+				let str = name.value+'发表：'+message.value+'['+time+']'
+				let li = document.createElement('li')
+				li.innerHTML=str
+				document.querySelector('ul').append(li)
+				name.value=''
+				message.value=''
+			}
+		</script>
+	</body>
+</html>

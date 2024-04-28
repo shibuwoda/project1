@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fn = function add(a,b){
+            return a+b
+        }
+        console.log(fn(2,3));//5
+        // console.log(add(2,3));//报错
+        let fn2 =function(a,b){
+            return a+b
+        }
+        console.log(fn2(2,3));//5
+        (function(num1,num2){
+            return num1+num2 
+        })(2,3)
+        console.log((function(num1,num2){
+            return num1+num2 
+        })(2,3));//5
+        // let sum=(x,y)=>x+y
+        // console.log(sum(2,3));//5
+        // let sum=x=>x*x
+        // console.log(sum(5));//25
+        let sum=()=>40
+        console.log(sum());//40
+
+        function comp(a,b,fn){
+            return fn(a,b);
+        }
+        var result = comp(5,6,function(a,b){
+                        return (a+b);
+        });		 
+        console.log(result);
+        function f1(){
+            var num=100
+        }
+        // console.log(num);
+        fun1();
+function fun1(){
+console.log("A");
+}
+var fun1 = function(){
+console.log("B");
+}
+function fun2(){
+console.log("C");
+}
+var fun2 = function(){
+console.log("D");
+}
+fun2();
+function outer(){
+var m = 100;
+function inner(){
+    m += 10;
+console.log(m);
+}
+return inner;
+}
+var i = outer();
+var j = outer();
+i();
+i();
+j();
+function fo(){
+var i = 0;
+return function(n){
+return n + i++;
+}
+}
+var f = fo();
+var a = f(15);
+var b = fo()(15);
+var c = fo()(20);
+var d = f(20);
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+    </script>
+</body>
+</html>

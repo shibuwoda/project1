@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// 用JavaScript中的函数实现一个简易计算器，实现加减乘除等操作。
+			let fn=function(){
+				let num1=+prompt('请输入第一个要运算的数')
+				let rule=prompt("请输入运算法则(+-*/)")
+				let num2=+prompt('请输入第二个要运算的数')
+				let result=0
+				if(rule=='+'){
+					result=num1+num2
+				}else if(rule =='-'){
+					result=num1-num2
+				}else if(rule =='*'){
+					result=num1*num2
+				}else if(rule =='/'){
+					result=num1/num2
+				}else{
+					alert("输入的运算符号有误，请重试!")
+					fn()
+				}
+				alert('计算结果为'+result)
+				
+			}
+			fn()
+		</script>
+	</body>
+</html>
